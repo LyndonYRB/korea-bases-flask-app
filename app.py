@@ -70,7 +70,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return "US bases in South Korea"
+  return "US bases in south korea"
 
 @app.route("/militarybase/", methods=['GET', 'POST'])
 @app.route("/<id>", methods=['GET', 'PUT', 'DELETE'])
