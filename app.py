@@ -68,9 +68,12 @@ MilitaryBase(base_name='USAG Daegu', location="Daegu", branch_in_controll="Army"
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+  return "US bases in South Korea"
 
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/<id>', methods=['GET', 'PUT', 'DELETE'])
+@app.route("/militarybase/", methods=['GET', 'POST'])
+@app.route("/<id>", methods=['GET', 'PUT', 'DELETE'])
 def endpoint(id=None):
     if request.method == 'GET':
         if id:
