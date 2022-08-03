@@ -101,4 +101,4 @@ def endpoint(id=None):
         return jsonify({"deleted": True})
 
 
-app.run(debug=False)
+app.run(debug=True)
