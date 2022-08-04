@@ -4,7 +4,7 @@ from playhouse.shortcuts import model_to_dict, dict_to_model
 
 
 db = PostgresqlDatabase('project', user='postgres',
-                        password='0000', host='localhost', port=5432)
+                        password='0000', host='localhost')
 
 
 class BaseModel(Model):
@@ -72,7 +72,7 @@ app = Flask(__name__)
 def index():
   return "US bases in south korea"
 
-@app.route("/militarybase/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 @app.route("/<id>", methods=['GET', 'PUT', 'DELETE'])
 def endpoint(id=None):
     if request.method == 'GET':
@@ -101,4 +101,4 @@ def endpoint(id=None):
         return jsonify({"deleted": True})
 
 
-app.run(debug=True, port=5432)
+app.run(debug=True)
