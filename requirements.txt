@@ -7,5 +7,6 @@ peewee==3.15.1
 postgres==4.0
 psycopg2-binary==2.9.3
 psycopg2-pool==1.1
+python-dotenv==0.20.0
 six==1.16.0
 Werkzeug==2.2.1
