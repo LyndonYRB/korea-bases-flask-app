@@ -4,7 +4,7 @@ from playhouse.shortcuts import model_to_dict, dict_to_model
 
 
 
-db = PostgresqlDatabase('korea-bases-flask-app', user='postgres', port='',
+db = PostgresqlDatabase('korea-bases-flask-app', user='postgres', port="5432",
                         password='0000', host='localhost')
 
 
