@@ -3,7 +3,7 @@ from peewee import *
 from playhouse.shortcuts import model_to_dict, dict_to_model
 
 
-db = PostgresqlDatabase('project', user='postgres',
+db = PostgresqlDatabase('project', user='postgres', port='5432',
                         password='0000', host='localhost')
 
 
@@ -67,6 +67,7 @@ MilitaryBase(base_name='USAG Daegu', location="Daegu", branch_in_controll="Army"
              year_activated=1950, miles_from_dmv=150).save()
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def index():
