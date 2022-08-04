@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from peewee import *
 from playhouse.shortcuts import model_to_dict, dict_to_model
-from playhouse.db_url import connect
-import os
 
 
-db = connect(os.environ.get('DATABASE_URL'))
+
+db = PostgresqlDatabase('korea-bases-flask-app', user='postgres', port='',
+                        password='0000', host='localhost')
 
 
 class BaseModel(Model):
